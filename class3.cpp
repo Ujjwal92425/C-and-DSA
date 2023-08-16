@@ -28,9 +28,11 @@ int main () {
 using namespace std;
 int main () {
 
-    double a=30.101;
-    double b=3.01416;
-    cout<<showpoint<<a<<endl<<b;
-    cout<<noshowpoint<<a<<endl<<b;
+    // double a=30.101;
+    // double b=3.01416;
+    // cout<<showpoint<<a<<endl<<b;
+    // cout<<noshowpoint<<a<<endl<<b;
+    cout<<setiosflags(ios :: showpos) << setiosflags(ios::scientific)<<123<<123.23;
+    return 0;
 
 }

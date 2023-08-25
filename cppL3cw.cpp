@@ -18,7 +18,7 @@
 // int main () {
 //     void printresult();
 // }
-#include <iostream>
+/*#include <iostream>
 #include <cstring> // For string manipulation functions
 using namespace std;
 
@@ -55,3 +55,42 @@ int main() {
     person.printresult(); // Call the printresult function to display the result
     return 0;
 }
+*/
+//static member function 
+
+#include <iostream>
+using namespace std;
+class box
+{
+private:
+    static int length;
+    static int breath;
+    static int height;
+
+public:
+    static void print() {
+        cout<<" the value of length is : "<<length<<endl;
+        cout<<" the value of breath is : "<<breath<<endl;
+        cout<<" the value of height is : "<<height<<endl;
+
+    }  
+};
+// int box :: length =10;
+// int box :: breath =20;
+// int box :: height =30;
+
+
+int main () {
+    box b;
+    cout << "static member function is called through object name :\n"<<endl;
+    b.print();
+    cout << "static member function is called through class name :\n"<<endl;
+
+    box ::print();
+    return 0;
+}
+
+
+
+
+

@@ -86,9 +86,9 @@ int main () {
     }
      s =n+m;
 
-    for ( i = 0; i < m; i++)
+    for ( i = 0; i < n; i++)
     {
-        arr1[n+i]=arr2[i];
+        arr2[m+i]=arr1[i];
     }
     
     for ( i = 0; i < s; i++)

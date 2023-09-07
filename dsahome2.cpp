@@ -86,14 +86,14 @@ int main () {
     }
      s =n+m;
 
-    for ( i = 0; i < n; i++)
+    for ( i = 0; i < m; i++)
     {
-        arr2[m+i]=arr1[i];
+        arr1[n+i]=arr2[i];
     }
     
     for ( i = 0; i < s; i++)
     {
-        
+        cout<<arr1[i];
     }
     
     

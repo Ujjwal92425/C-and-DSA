@@ -44,6 +44,7 @@ int main()
     }
     temp=head;
     cout<<endl;
+
     struct Node *newnode=new Node();
     cout<<"Enter data";
     cin>>newnode->data;
@@ -86,7 +87,7 @@ int main() {
         newnode->prev = NULL;
         newnode->next = NULL;
 
-        if (head == nullptr) {
+        if (head == NULL) {
             head = newnode;
         }
         else {
@@ -112,7 +113,7 @@ int main() {
     cin >> data2 ;
 
     struct node* temp = head;
-    int count = 1; // position starts from 1
+    int count = 1; 
     while (count < pos-1) {
         temp = temp->next;
         count++;
@@ -135,14 +136,13 @@ int main() {
 
     // print 
     temp = head;
-    while (temp != nullptr) {
+    while (temp != NULL) {
         cout << temp->data << " ";
         temp = temp->next;
     }
 
     return 0;
 }
-
 
 
   //                 * " U J J U " *

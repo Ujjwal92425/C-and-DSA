@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 int main () {
-    int n,i,top=-1;
+    int n,i,top=-1,temp;
     cin>>n;
     int arr[n];
     for ( i = 0; i < n; i++)
@@ -10,22 +10,37 @@ int main () {
         cin>>arr[i];
         top++;
     }
-
+    for ( i = top; i >=0; i--)
+    {
+       cout<<arr[i] <<" ";
+    }
+cout<<endl;
     for ( i = 0; i <=top; i++)
     {
-        if (i==top)
+       cout<<arr[i] <<" ";
+    }
+    for ( i = top; i >= 0; i--)
+    {   for(int j =top; j>=0;j--) {
+        if (arr[i]>arr[i-1])
         {
-            cout<<arr[top]<<" "<<"-1"<<endl;
-        }
-        else {
-            if (arr[i]<arr[i+1]) {
-                cout<<arr[i]<<" "<<arr[i+1]<<endl;
-            }
-            else if (arr[i]>arr[i+1]){
-                cout<<arr[i]<<" "<<"-1"<<endl;
-            }
+            temp=arr[i];
+            arr[i]=arr[i-1];
+            arr[i-1]=temp;
         }
     }
+        
+    }
+    cout<<endl;
+     for ( i = 0; i <=top; i++)
+    {
+       cout<<arr[i] <<" ";
+    }
+    cout<<endl;
+    cout<<"Max: "<<arr[0];
+    cout<<endl<<"Min: "<<arr[top];
+    
+
+    
 }
 
 //

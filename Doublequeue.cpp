@@ -48,7 +48,7 @@ void inqueue() {
             cout<<queue[i]<<" ";
             rear=(rear+1)%N;
         }
-        cout<<"Rear Element : "<<queue[rear]<<endl;
+        cout<<endl<<"Rear Element : "<<queue[rear]<<endl;
         
     } 
 

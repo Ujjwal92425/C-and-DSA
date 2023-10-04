@@ -66,7 +66,7 @@ void display() {
         temp=front;
         while (temp!=NULL)
         {
-            cout<<temp->data<<" ";
+            cout<<"Data: " << temp->data<<" "<<" :) "<<" Priority : "<<temp->priority<<endl;;
             temp=temp->next;
         }
         temp=front;

@@ -1,16 +1,9 @@
-#include <iostream>
-// #include <fstream>
-// using namespace std;
-// int main () {
-//     char s[30];
-//     ofstream fileout;
-//     ifstream filein;
-//     fileout.open("data",ios::app);
-//     fileout <<"Hello World ";
-//     fileout.close();
-
-//     filein.open("data",ios::in);
-//     filein.getline(s,30);
-//     cout<<s;
-
-// }
+4
+// 3
+// 1 -2 3
+// 4
+// 4 1 5 1
+// 4
+// 10 -10 -10 10
+// 5
+// -5 -4 -3 -2 -1

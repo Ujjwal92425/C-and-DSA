@@ -29,7 +29,7 @@
        
 // }
 
-#include<bits/stdc++.h>
+/*#include<bits/stdc++.h>
 using namespace std;
 
 class Student {
@@ -75,4 +75,9 @@ int main () {
 
 
 }
+*/
+#include<iostream>
+using namespace std;
+
+
 

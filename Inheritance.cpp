@@ -76,8 +76,109 @@ int main () {
 
 }
 */
+
+
+//Hierarchical
+/*#include<iostream>
+using namespace std;
+class M  {
+    protected:
+    int x;
+    public:
+    void set(int a) {
+        x=a;
+    }
+
+};
+class N :public M {
+    public:
+    void display() {
+        cout<<"X : "<<x<<" accessed in Derived Class N "<<endl;
+    }
+};
+class O :public M {
+    public:
+    void display() {
+        cout<<"X : "<<x<<" accessed in Derived Class O";
+    }
+};
+int main() {
+    N obj1;
+    O obj2;
+    obj1.set(12);
+    obj1.display();
+    obj2.set(19);
+    obj2.display();
+    return 0;
+}*/
+
+//Hybrid
 #include<iostream>
 using namespace std;
+class student
+{
+    protected:
+    int roll_number;
+    public:
+    void get_number(int a)
+    {
+        roll_number=a;
+    }
+    void put_number()
+    {
+        cout<<"Roll No."<<roll_number<<endl;
+    }
+};
+class test:public student
+{
+    protected:
+    float part1, part2;
+    public:
+    void get_marks(float x, float y)
+    {
+        part1=x;
+        part2=y;
+    }
+    void put_marks()
+    {
+        cout<<"\n"<<"part1="<<part1<<"\n"<<"part2="<<part2<<"\n";
+    }
+};
+class sports
+{
+    protected:
+    float score;
+    public:
+    void get_score(float s)
+    {
+        score=s;
+    }
+    void put_score()
+    {
+        cout<<"Sports wt:"<<score<<"\n\n";
+    }
+};
+class result:public test,public sports
+{
+    float total;
+    public:
+    void display();
+};
+void result :: display () {
+    total = part1 +part2+score;
+    put_number();
+    put_marks();
+    put_score();
+    cout<<"Total Score : "<<total<<endl;
+
+}
+int main() {
+    result student_1;
+    student_1.get_number(1234);
+    student_1.get_marks(27.5,33.5);
+    student_1.display();
+    return 0 ;
+}
 
 
 

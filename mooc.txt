@@ -1,0 +1,25 @@
+CSE101 - COMPUTER PROGRAMMING	122232	C	2	C for Everyone: Programming Fundamentals	Moocs	https://in.coursera.org/learn/c-for-everyone?specialization=coding-for-everyone	IsProctored: No
+
+Percentage of Syllabus Mapped:90	One academic task shall be exempted and the marks shall be awarded as per guidelines
+
+
+
+
+CSE205 - DATA STRUCTURES AND ALGORITHMS	 	 	3	Mastering Data Structures & Algorithms using C and C++	Moocs	Udemy	IsProctored: NO
+
+Percentage of Syllabus Mapped:80	All academic tasks shall be exempted and the marks shall be awarded as per guidelines
+
+
+
+
+
+
+
+CSE202 - OBJECT ORIENTED PROGRAMMING	 	 	3	Programming In C++: A Hands-On Introduction Specialization	MOOCs	Coursera	IsProctored: NO
+
+Percentage of Syllabus Mapped:50	AnyTwo academic task shall be exempted and the marks shall be awarded as per guidelines
+
+
+CSE101 - COMPUTER PROGRAMMING	122232	C	2	C for Everyone: Programming Fundamentals	Moocs	https://in.coursera.org/learn/c-for-everyone?specialization=coding-for-everyone	IsProctored: No
+
+Percentage of Syllabus Mapped:90	One academic task shall be exempted and the marks shall be awarded as per guidelines

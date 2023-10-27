@@ -1,33 +1,33 @@
-#include <iostream>
-using namespace std;
-class one {
+// #include <iostream>
+// using namespace std;
+// class one {
     
-    public:
-    int x,y;
-    void in() {
-        cout<<"Enter the data "<<endl;
-        cin>>x>>y;
-    }
-};
-class two : public one {
+//     public:
+//     int x,y;
+//     void in() {
+//         cout<<"Enter the data "<<endl;
+//         cin>>x>>y;
+//     }
+// };
+// class two : public one {
     
-    public:
-    int z;
-    void take() {
-        cout<<"Enter Z : "<<endl;
-        cin>>z;
-    }
-    void dis() {
-        cout<<x+y+z;
-        }
-};
-int main() {
-    two t1;
-    t1.in();
-    t1.take();
-    t1.dis();
+//     public:
+//     int z;
+//     void take() {
+//         cout<<"Enter Z : "<<endl;
+//         cin>>z;
+//     }
+//     void dis() {
+//         cout<<x+y+z;
+//         }
+// };
+// int main() {
+//     two t1;
+//     t1.in();
+//     t1.take();
+//     t1.dis();
        
-}
+// }
 
 
 /*#include<bits/stdc++.h>
@@ -114,72 +114,143 @@ int main() {
 }*/
 
 //Hybrid
-#include<iostream>
+// #include<iostream>
+// using namespace std;
+// class student
+// {
+//     protected:
+//     int roll_number;
+//     public:
+//     void get_number(int a)
+//     {
+//         roll_number=a;
+//     }
+//     void put_number()
+//     {
+//         cout<<"Roll No."<<roll_number<<endl;
+//     }
+// };
+// class test:public student
+// {
+//     protected:
+//     float part1, part2;
+//     public:
+//     void get_marks(float x, float y)
+//     {
+//         part1=x;
+//         part2=y;
+//     }
+//     void put_marks()
+//     {
+//         cout<<"\n"<<"part1="<<part1<<"\n"<<"part2="<<part2<<"\n";
+//     }
+// };
+// class sports
+// {
+//     protected:
+//     float score;
+//     public:
+//     void get_score(float s)
+//     {
+//         score=s;
+//     }
+//     void put_score()
+//     {
+//         cout<<"Sports wt:"<<score<<"\n\n";
+//     }
+// };
+// class result:public test,public sports
+// {
+//     float total;
+//     public:
+//     void display();
+// };
+// void result :: display () {
+//     total = part1 +part2+score;
+//     put_number();
+//     put_marks();
+//     put_score();
+//     cout<<"Total Score : "<<total<<endl;
+
+// }
+// int main() {
+//     result student_1;
+//     student_1.get_number(1234);
+//     student_1.get_marks(27.5,33.5);
+//     student_1.display();
+//     return 0 ;
+// }
+#include <iostream>
 using namespace std;
-class student
-{
-    protected:
-    int roll_number;
+class A {
     public:
-    void get_number(int a)
+    A()
     {
-        roll_number=a;
+        cout<<"Calling default base class constructor"<<endl;
     }
-    void put_number()
-    {
-        cout<<"Roll No."<<roll_number<<endl;
+    ~A() {
+        cout<<"Calling base class destructor "<<endl;
     }
-};
-class test:public student
-{
-    protected:
-    float part1, part2;
-    public:
-    void get_marks(float x, float y)
-    {
-        part1=x;
-        part2=y;
-    }
-    void put_marks()
-    {
-        cout<<"\n"<<"part1="<<part1<<"\n"<<"part2="<<part2<<"\n";
-    }
-};
-class sports
-{
-    protected:
-    float score;
-    public:
-    void get_score(float s)
-    {
-        score=s;
-    }
-    void put_score()
-    {
-        cout<<"Sports wt:"<<score<<"\n\n";
-    }
-};
-class result:public test,public sports
-{
-    float total;
-    public:
-    void display();
-};
-void result :: display () {
-    total = part1 +part2+score;
-    put_number();
-    put_marks();
-    put_score();
-    cout<<"Total Score : "<<total<<endl;
 
-}
-int main() {
-    result student_1;
-    student_1.get_number(1234);
-    student_1.get_marks(27.5,33.5);
-    student_1.display();
-    return 0 ;
+};
+class B:public A {
+    public:
+    B()
+    {
+        cout<<"Calling default derived class constructor"<<endl;
+    }
+    ~B() {
+        cout<<"Calling derived class destructor "<<endl;
+    }
+};
+int main ()  {
+    B obj1;
+    return 0;
 }
 
+#include <iostream>
+using namespace std;
 
+class A{
+    int x, y;
+    public:
+    A(int r, int s){
+        x =r; y=s;
+        cout << "Class A: " << x << " " << y << endl;
+    }
+    ~A(){
+        cout << "Class A Destructor" << endl;
+    }
+   
+};
+
+class B: public A{
+    int l, m;
+    public:
+    B(int p, int q, int r, int s) : A(r, s){
+       l = p; m = q;
+        cout << "Class B: " << l << " " << m << endl;
+    }
+    ~B(){
+        cout << "Class B Destructor" << endl;
+    }
+    
+};
+
+class C: public B{
+    int n, m;
+    public:
+    C(int u, int v, int p, int q, int r, int s) : B(p, q, r, s){
+       n = u; m = v;
+        cout << "Class C: " << n << " " << m << endl;
+    }
+    ~C(){
+        cout << "Class C Destructor" << endl;
+    }
+    
+};
+
+int main(){
+    C obj(10, 20, 30,40,50,60);
+}
 

@@ -1,9 +1,30 @@
-4
-// 3
-// 1 -2 3
-// 4
-// 4 1 5 1
-// 4
-// 10 -10 -10 10
-// 5
-// -5 -4 -3 -2 -1
+#include <iostream>
+// using namespace std;
+// class one {
+    
+//     public:
+//     int x,y;
+//     void in() {
+//         cout<<"Enter the data "<<endl;
+//         cin>>x>>y;
+//     }
+// };
+// class two : public one {
+    
+//     public:
+//     int z;
+//     void take() {
+//         cout<<"Enter Z : "<<endl;
+//         cin>>z;
+//     }
+//     void dis() {
+//         cout<<x+y+z;
+//         }
+// };
+// int main() {
+//     two t1;
+//     t1.in();
+//     t1.take();
+//     t1.dis();
+       
+// }

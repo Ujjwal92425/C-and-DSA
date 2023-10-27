@@ -73,6 +73,7 @@ int main()
     cin>>count;
 
     for(i=0;i<count;i++)
+    
     {
         cout<<"Enter data";
         cin>>data;

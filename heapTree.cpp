@@ -11,14 +11,14 @@ void swap(int *a, int *b)
     *b=temp;
 }
 
-// // void maxHeap(int index)
-// // {
-// //     while(index > 0 && heap[index]>heap[index-1]/2)
-// //     {
-// //         swap(&heap[index], &heap[(index-1)/2]);
-// //         index=(index-1)/2;
-// //     }
-// // }
+void maxHeap(int index)
+{
+    while(index > 0 && heap[index]>heap[(index-1)/2])
+    {
+        swap(&heap[index], &heap[(index-1)/2]);
+        index=(index-1)/2;
+    }
+}
 
 void insert(int value)
 {
@@ -52,19 +52,19 @@ void heapify(int index)
     }
 }
 
-// // void deleteMax()
-// // {
-// //     if(heapsize==0)
-// //     {
-// //         cout<<"Heap is empty.cannot delete.\n";
-// //         return -1;
-// //     }
-// //     int deletedValue=heap[0];
-// //     heap[0]=heap[heapsize-1];
-// //     heapsize--;
-// //     heapify(0);
-// //     return deletedValue;
-// // }
+int deleteMax()
+{
+    if(heapsize==0)
+    {
+        cout<<"Heap is empty.cannot delete.\n";
+        return -1;
+    }
+    int deletedValue=heap[0];
+    heap[0]=heap[heapsize-1];
+    heapsize--;
+    heapify(0);
+    return deletedValue;
+}
 
 int main()
 {
@@ -79,45 +79,22 @@ int main()
         cin>>data;
         insert(data);
     }
-    cout<<"Max heap after inbsertions: ";
-    for(int i=0;i<heapsize;i++)
-    {
-        cout<<heap[i]<<" ";
-    }
-    cout<<endl;
-
-//     int max=deleteMax();
-//     cout<<"Deleted max element:";
-//     cout<<endl;
-//     cout<<"max heap after deletion:";
-//     for(int i=0;i<heapsize;i++)
-//     {
-//         cout<<heap[i]<<" ";
-//     }
-//     cout<<endl;
-//     return 0;
- }
-
-
-void min_heap(int arr[],int n,int i ) {
-    int smallest=i;
-    int left=2*i+1;
-    int right=2*i+2;
-
-    if (left < n && arr[left] < arr[smallest]) {
-        smallest=left;
-    }
-    if (right < n && arr[right] < arr[smallest])
-    {
-        smallest=right;
-    }
-    if (smallest != 1)
-    {
-        swap(&arr[i],&arr[smallest]);
-
-        min_heap(arr,n,smallest);
-    }
     
-    
+   cout<<"Max heap after insertions: ";
+   for(int i=0;i<heapsize;i++)
+   {
+       cout<<heap[i]<<" ";
+   }
+   cout<<endl;
 
+   int max=deleteMax();
+   cout<<"Deleted max element: "<<max<<endl;
+   cout<<"Max heap after deletion: ";
+   for(int i=0;i<heapsize;i++)
+   {
+       cout<<heap[i]<<" ";
+   }
+   cout<<endl;
+   
+   return 0;
 }

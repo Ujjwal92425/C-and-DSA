@@ -92,22 +92,50 @@ using namespace std;
 
 
 
-class Test {
-    public:
-    Test () {
-        cout<<"Constructor of Test"<<endl;
-    }
-    ~Test() {
-        cout<<"Distructor of Test "<<endl;
+// class Test {
+//     public:
+//     Test () {
+//         cout<<"Constructor of Test"<<endl;
+//     }
+//     ~Test() {
+//         cout<<"Distructor of Test "<<endl;
 
-    }
-};
-int main () {
-    try {
-        Test t1;
-        throw 10;
-    }
-    catch(int i) {
-        
-    }
+//     }
+// };
+// int main () {
+//     try {
+//         Test t1;
+//         throw 10;
+//     }
+//     catch(int i) {
+
+//     }
+// }
+
+
+
+
+#include<iostream>
+using namespace std;
+template<class T>
+void display(T x)
+{
+    cout<<"Template display."<<x<<"\n";
+}
+template<class T1,class T2,class T3>
+void display(T1 x,T2 y,T3 z)
+{
+    cout<<"Template display."<<x<<""<<y<<""<<z<<"\n";
+}
+void display(int x)
+{
+    cout<<"Explicit display."<<x<<"\n";
+}
+int main()
+{
+    display(100);
+    display(56.67);
+    display('a');
+    display(9.67,'b',67);
+    return 0;
 }
